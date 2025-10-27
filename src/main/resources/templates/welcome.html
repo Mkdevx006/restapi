@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Welcome Page</h1>
+    <div class="welcome-container">
+        <h2>User Information</h2>
+        <div class="user-info">
+            <p th:if="${firstname}">First Name: <span th:text="${firstname}"></span></p>
+            <p th:if="${lastname}">Last Name: <span th:text="${lastname}"></span></p>
+        </div>
+        
+        <div th:if="${message}" class="message" th:text="${message}"></div>
+        
+        <a href="/" class="back-link">Back to User Management</a>
+    </div>
+</body>
+</html>
